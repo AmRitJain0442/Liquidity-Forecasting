@@ -92,3 +92,7 @@
 #### [✓] step-1: EDA & Research Notebook Initialization
 - **Agent:** codex-main  **Time:** 2026-03-28 03:58:14  **Status:** approved
 - EDA pipeline fully executed: RESEARCH_LOG.md initialized with dataset summary (3365 rows, 2011–2024), ADF/KPSS stationarity tests on raw (non-stationary) and first-differenced (stationary) series, ACF/PACF plots saved to plots/eda/, seasonal decomposition (21-day period), distribution analysis, and researcher notes documenting persistence (lag-1 AC=0.97), strong trend (R²=0.81), and left-skew (-0.68). All artifacts written to Liquidity-Index-Research-/plots/eda/.
+
+#### [✓] step-2: Data Preprocessing & Train/Test Split Pipeline
+- **Agent:** codex-main  **Time:** 2026-03-28 04:01:39  **Status:** approved
+- Preprocessing pipeline built: 17 lag/rolling/calendar features engineered, IQR outlier clipping (17 rows capped), chronological 80/20 split (train 2011-07-13→2022-04-25, test 2022-04-26→2024-12-31), two scaler sets saved — StandardScaler for ML and MinMaxScaler for DL — both fitted on train split only to prevent leakage. Artifacts: preprocessing.py, minmax_scalers.joblib, preprocessed_arrays.joblib, split_info.json; RESEARCH_LOG.md updated.
