@@ -144,3 +144,7 @@
 #### [✓] step-5: ML Models Ablation (Linear, Ridge, Lasso, SVR, RF, XGBoost, LightGBM)
 - **Agent:** codex-main  **Time:** 2026-03-29 02:11:13  **Status:** approved
 - 8 ML models trained and evaluated (LinearRegression, Ridge, Lasso, SVR-linear, SVR-rbf, RandomForest, XGBoost, LightGBM); linear family dominates with RMSE ~0.157 vs tree family at 0.206–0.288; SVR-rbf is worst performer (RMSE 0.288, R²=0.15); all 8 prediction CSVs, rmse_comparison.png, and metrics_registry.csv rows written; RESEARCH_LOG.md updated.
+
+#### [✓] step-6: Deep Learning: LSTM, Bidirectional LSTM & GRU Models
+- **Agent:** codex-main  **Time:** 2026-03-29 02:18:45  **Status:** approved
+- Deep learning RNN models implemented (LSTM, Bidirectional LSTM, GRU): 3 loss curve PNGs confirmed present in plots/dl/, RESEARCH_LOG.md updated, and 5 additional files written (dl_rnn_models.py, 3 prediction CSVs, metrics_registry.csv rows) per the 9-file artifact count.
