@@ -136,3 +136,7 @@
 #### [✓] step-3: Statistical Baseline Models (Naive, MA, ETS, ARIMA, SARIMA)
 - **Agent:** codex-main  **Time:** 2026-03-29 01:53:02  **Status:** approved
 - Statistical baseline models (Naive, MA-7d, ETS, ARIMA, SARIMA) implemented in statistical_models.py; 32 artifacts produced including 5 forecast PNGs (arima, ets, moving_average_7d, naive, sarima confirmed as valid Matplotlib PNGs), prediction CSVs for each model, metrics_registry.csv, and RESEARCH_LOG.md updated with detailed EDA findings and model results (26 KB total log).
+
+#### [✓] step-4: Shared Metrics Tracker & Results Registry
+- **Agent:** codex-main  **Time:** 2026-03-29 02:05:46  **Status:** approved
+- utils/metrics_tracker.py delivered with all three public functions: compute_metrics (MAE/RMSE/MAPE/R2/SMAPE with epsilon-safe denominators and shape validation), log_result (upsert via drop-duplicate + concat), load_registry (with step-3 backfill that correctly depends on the `slug` column confirmed present in statistical_model_metrics.csv). Predictions canonical location confirmed at results/predictions/statistical/. Minor latent issue: every load_registry/log_result call re-reads and rewrites step-3 data unnecessarily, and the pre-seeded registry SMAPE values differ from step-3 CSV by ~1e-5 due to new epsilon-clipping in compute_metrics — negligible for research use but worth noting if cross-notebook SMAPE comparisons are made.
