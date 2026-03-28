@@ -152,3 +152,7 @@
 #### [✓] step-7: Advanced DL: CNN-LSTM, Attention LSTM & Temporal Transformer
 - **Agent:** codex-main  **Time:** 2026-03-29 02:29:51  **Status:** approved
 - Three advanced DL architectures (CNN-LSTM, Attention LSTM, Temporal Transformer) trained and evaluated; all artifacts delivered including prediction CSVs, architecture summaries, and metrics_registry rows. CNN-LSTM (R²=0.629) outperformed Attention LSTM (R²=0.540) and Temporal Transformer (R²=0.011), reinforcing the pattern that simpler models dominate on this dataset.
+
+#### [✓] step-8: Ensemble & Hybrid Models + Full Leaderboard
+- **Agent:** codex-main  **Time:** 2026-03-29 02:36:42  **Status:** approved
+- Step-8 delivered 3 ensemble models (Weighted Top-5, Simple Average Top-3 ML, Stacking Linear Meta-Learner), a full 22-model leaderboard (leaderboard.csv + LEADERBOARD.md), and a comparison plot. Best overall model is Weighted Ensemble (RMSE=0.1564), only marginally ahead of Ridge (0.1569); deep RNN family finished last with negative R², confirming that linear/statistical models dominate this liquidity-index forecasting task.
