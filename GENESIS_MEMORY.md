@@ -140,3 +140,7 @@
 #### [✓] step-4: Shared Metrics Tracker & Results Registry
 - **Agent:** codex-main  **Time:** 2026-03-29 02:05:46  **Status:** approved
 - utils/metrics_tracker.py delivered with all three public functions: compute_metrics (MAE/RMSE/MAPE/R2/SMAPE with epsilon-safe denominators and shape validation), log_result (upsert via drop-duplicate + concat), load_registry (with step-3 backfill that correctly depends on the `slug` column confirmed present in statistical_model_metrics.csv). Predictions canonical location confirmed at results/predictions/statistical/. Minor latent issue: every load_registry/log_result call re-reads and rewrites step-3 data unnecessarily, and the pre-seeded registry SMAPE values differ from step-3 CSV by ~1e-5 due to new epsilon-clipping in compute_metrics — negligible for research use but worth noting if cross-notebook SMAPE comparisons are made.
+
+#### [✓] step-5: ML Models Ablation (Linear, Ridge, Lasso, SVR, RF, XGBoost, LightGBM)
+- **Agent:** codex-main  **Time:** 2026-03-29 02:11:13  **Status:** approved
+- 8 ML models trained and evaluated (LinearRegression, Ridge, Lasso, SVR-linear, SVR-rbf, RandomForest, XGBoost, LightGBM); linear family dominates with RMSE ~0.157 vs tree family at 0.206–0.288; SVR-rbf is worst performer (RMSE 0.288, R²=0.15); all 8 prediction CSVs, rmse_comparison.png, and metrics_registry.csv rows written; RESEARCH_LOG.md updated.
