@@ -96,3 +96,43 @@
 #### [✓] step-2: Data Preprocessing & Train/Test Split Pipeline
 - **Agent:** codex-main  **Time:** 2026-03-28 04:01:39  **Status:** approved
 - Preprocessing pipeline built: 17 lag/rolling/calendar features engineered, IQR outlier clipping (17 rows capped), chronological 80/20 split (train 2011-07-13→2022-04-25, test 2022-04-26→2024-12-31), two scaler sets saved — StandardScaler for ML and MinMaxScaler for DL — both fitted on train split only to prevent leakage. Artifacts: preprocessing.py, minmax_scalers.joblib, preprocessed_arrays.joblib, split_info.json; RESEARCH_LOG.md updated.
+
+## Task: Continue the liquidity index ablation study from step-3 onwards: run statistical models, build metrics tracker, implement ML/DL/ensemble models, and compile the final research report.
+*Started: 2026-03-28 11:13:29* · Task ID: `liq-ab02`
+
+### Plan (7 steps)
+
+| Step | Title | Type | Agent |
+|------|-------|------|-------|
+| step-3 | Statistical Baseline Models (Naive, MA, ETS, ARIMA, SARIMA) | code | codex-worker |
+| step-4 | Shared Metrics Tracker & Results Registry | code | codex-worker |
+| step-5 | ML Models Ablation (Linear, Ridge, SVR, RF, XGBoost, LightGBM) | code | codex-worker |
+| step-6 | Deep Learning: LSTM, Bidirectional LSTM & GRU Models | code | codex-worker |
+| step-7 | Advanced DL: CNN-LSTM, Attention LSTM & Temporal Transformer | code | codex-worker |
+| step-8 | Ensemble & Hybrid Models + Full Leaderboard | code | codex-worker |
+| step-9 | Final Research Report Compilation | docs | codex-worker |
+
+### Progress
+
+
+## Task: Continue liquidity index ablation study from step-3: statistical baselines through final research report compilation.
+*Started: 2026-03-29 01:40:44* · Task ID: `liq-ab03`
+
+### Plan (7 steps)
+
+| Step | Title | Type | Agent |
+|------|-------|------|-------|
+| step-3 | Statistical Baseline Models (Naive, MA, ETS, ARIMA, SARIMA) | code | codex-worker |
+| step-4 | Shared Metrics Tracker & Results Registry | code | codex-worker |
+| step-5 | ML Models Ablation (Linear, Ridge, Lasso, SVR, RF, XGBoost, LightGBM) | code | codex-worker |
+| step-6 | Deep Learning: LSTM, Bidirectional LSTM & GRU Models | code | codex-worker |
+| step-7 | Advanced DL: CNN-LSTM, Attention LSTM & Temporal Transformer | code | codex-worker |
+| step-8 | Ensemble & Hybrid Models + Full Leaderboard | code | codex-worker |
+| step-9 | Final Research Report Compilation | docs | codex-worker |
+
+### Progress
+
+
+#### [✓] step-3: Statistical Baseline Models (Naive, MA, ETS, ARIMA, SARIMA)
+- **Agent:** codex-main  **Time:** 2026-03-29 01:53:02  **Status:** approved
+- Statistical baseline models (Naive, MA-7d, ETS, ARIMA, SARIMA) implemented in statistical_models.py; 32 artifacts produced including 5 forecast PNGs (arima, ets, moving_average_7d, naive, sarima confirmed as valid Matplotlib PNGs), prediction CSVs for each model, metrics_registry.csv, and RESEARCH_LOG.md updated with detailed EDA findings and model results (26 KB total log).
