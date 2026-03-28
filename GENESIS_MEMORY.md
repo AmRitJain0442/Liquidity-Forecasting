@@ -156,3 +156,7 @@
 #### [✓] step-8: Ensemble & Hybrid Models + Full Leaderboard
 - **Agent:** codex-main  **Time:** 2026-03-29 02:36:42  **Status:** approved
 - Step-8 delivered 3 ensemble models (Weighted Top-5, Simple Average Top-3 ML, Stacking Linear Meta-Learner), a full 22-model leaderboard (leaderboard.csv + LEADERBOARD.md), and a comparison plot. Best overall model is Weighted Ensemble (RMSE=0.1564), only marginally ahead of Ridge (0.1569); deep RNN family finished last with negative R², confirming that linear/statistical models dominate this liquidity-index forecasting task.
+
+#### [✓] step-9: Final Research Report Compilation
+- **Agent:** codex-main  **Time:** 2026-03-29 02:49:49  **Status:** approved
+- FINAL_REPORT.md (17 KB, well over 800 words) compiled from leaderboard CSVs with all required sections: Abstract, Dataset & Problem Statement, Methodology, and continuation sections; RESEARCH_LOG.md (30 KB) carries the full study history including EDA provenance, stationarity tests, trend analysis, researcher notes, and a study-complete completion block. A generator script (src/models/final_report.py, 34 KB) programmatically assembles the report from live artifacts, ensuring reproducibility.
