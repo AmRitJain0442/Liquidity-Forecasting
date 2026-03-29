@@ -242,3 +242,23 @@
 **Task `liq-val02` completed at 2026-03-29 15:01:52**
 
 ---
+
+## Task: Extend the liquidity-index validation study with statistical significance tests, full walk-forward CV for all model families, temporal stability analysis, ARIMAX with exogenous features, and a revised FINAL_REPORT reflecting post-validation findings.
+*Started: 2026-03-29 15:23:24* · Task ID: `liq-ext01`
+
+### Plan (5 steps)
+
+| Step | Title | Type | Agent |
+|------|-------|------|-------|
+| step-1 | Diebold-Mariano Significance Tests for Top-5 Models | code | codex-worker |
+| step-2 | Extended Walk-Forward CV for All 22 Models | code | codex-worker |
+| step-3 | Temporal Stability & Regime Analysis | code | codex-worker |
+| step-4 | ARIMAX with Lagged Exogenous Features | code | codex-worker |
+| step-5 | Revised FINAL_REPORT.md Post-Validation | docs | codex-worker |
+
+### Progress
+
+
+#### [✓] step-1: Diebold-Mariano Significance Tests for Top-5 Models
+- **Agent:** codex-main  **Time:** 2026-03-29 15:27:51  **Status:** approved
+- Diebold-Mariano pairwise significance tests completed for the corrected top-5 leaderboard models. All 10 pairs produced p-values far above α=0.05 (range 0.37–0.92), confirming rank-1 (Stacking Ensemble) is not statistically distinguishable from rank-2 or rank-3. Harvey-Leybourne-Newbold small-sample correction applied. Artifacts: dm_significance.py, dm_tests.csv (10 rows), dm_tests.md.
