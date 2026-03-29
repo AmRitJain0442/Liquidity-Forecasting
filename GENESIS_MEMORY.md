@@ -238,3 +238,7 @@
 #### [✓] step-8: Reproducibility Smoke-Test
 - **Agent:** codex-main  **Time:** 2026-03-29 15:01:52  **Status:** approved
 - Reproducibility smoke test written to validation/smoke_test.py; 4/4 checks pass — registry metrics non-NaN (22 rows), best-model RMSE recomputes within 1e-4, all 22 prediction CSVs exist on disk, and temporal train/test split is strictly future-only (train_end=2022-04-25, test_start=2022-04-26). Exit code 0 confirmed.
+
+**Task `liq-val02` completed at 2026-03-29 15:01:52**
+
+---
