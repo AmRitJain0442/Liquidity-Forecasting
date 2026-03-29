@@ -226,3 +226,7 @@
 #### [✓] step-5: Rectify Identified Leakage & Bias Issues
 - **Agent:** codex-main  **Time:** 2026-03-29 14:42:21  **Status:** approved
 - Rectification audit completed: IQR clipping leakage fixed (train-only bounds), residual mean-bias correction applied to 11 tree/DL models. All 4 artifacts produced: rectify_issues.py (46K), rectification_log.md with full audit trail, rectification_metrics.csv with before/after for all 22 models, and updated metrics_registry.csv sorted by RMSE. 9 of 22 pre-fix baselines were reconstructed in-memory (no legacy CSV available) but this is explicitly documented.
+
+#### [✓] step-6: MAPE & SMAPE Edge-Case Audit
+- **Agent:** codex-main  **Time:** 2026-03-29 14:50:13  **Status:** approved
+- Metric audit (validation/metric_audit.md) ran 4 checks across 22 models: PASS on finite metrics, SMAPE formula symmetry, and RMSE spot-check; FAIL on near-zero target exposure — 2024-11-01 target (0.02967) inflates MAPE by up to 5.85 pp for the worst models (worst APE 3921%). Registry values are mathematically correct; no corrections applied. SMAPE/MAE/RMSE recommended for ranking.
