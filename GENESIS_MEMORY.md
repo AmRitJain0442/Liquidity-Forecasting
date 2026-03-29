@@ -302,3 +302,7 @@
 #### [✓] step-1: Inventory All Artifacts Across the Project
 - **Agent:** codex-main  **Time:** 2026-03-29 16:40:28  **Status:** approved
 - Generated artifact_inventory.txt cataloguing 277 project files under Liquidity-Index-Research-/ with relative paths, byte sizes, and one-sentence descriptions; also produced the reusable generate_artifact_inventory.py script that drove the scan.
+
+#### [✓] step-2: Extract Key Metrics & Findings From All CSVs and MDs
+- **Agent:** codex-main  **Time:** 2026-03-29 16:52:21  **Status:** approved
+- extract_report_data.py ingests all 8 source files (6 CSVs + 2 MDs) with multi-candidate path resolution and produces Liquidity-Index-Research-/report_data.json (94 KB) containing source_resolution metadata, cross-checks (23 registry rows vs 22 leaderboard rows — one ARIMAX variant registry-only), and fully coerced numeric fields ready for the report writer.
