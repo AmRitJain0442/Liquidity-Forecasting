@@ -306,3 +306,7 @@
 #### [✓] step-2: Extract Key Metrics & Findings From All CSVs and MDs
 - **Agent:** codex-main  **Time:** 2026-03-29 16:52:21  **Status:** approved
 - extract_report_data.py ingests all 8 source files (6 CSVs + 2 MDs) with multi-candidate path resolution and produces Liquidity-Index-Research-/report_data.json (94 KB) containing source_resolution metadata, cross-checks (23 registry rows vs 22 leaderboard rows — one ARIMAX variant registry-only), and fully coerced numeric fields ready for the report writer.
+
+#### [✓] step-3: Write MASTER_FINAL_REPORT.md — Methodology & Data Sections
+- **Agent:** codex-main  **Time:** 2026-03-29 16:59:52  **Status:** approved
+- MASTER_FINAL_REPORT.md written (18,968 chars) with abstract and Sections 1–4; abstract cites exact leaderboard metrics (RMSE 0.1562, MAE 0.0938, SMAPE 9.9319), DM test results (0/10 significant pairs, p 0.37–0.92), walk-forward inflation cap (1.53%), and hardest regime (2024-H1 RMSE 0.273), all consistent with report_data.json.
