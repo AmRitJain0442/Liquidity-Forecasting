@@ -214,3 +214,7 @@
 #### [✓] step-2: Train vs Test Performance Gap Analysis
 - **Agent:** codex-main  **Time:** 2026-03-29 13:30:05  **Status:** approved
 - Overfit analysis complete for 22 models across 5 families. 4 FAIL (tree/kernel ML: XGBoost, RF, LightGBM, SVR-RBF — train R2 ~0.99 but test R2 ~0.15–0.57, overfit_ratio 0.36–0.50); 4 FLAG (all RNN/Transformer family — underfit: both train and test RMSE exceed naive baseline, overfit_ratio inverted >1 due to lookback-adjusted train horizon); 14 PASS (linear, statistical, ensemble models — stable train/test gap, overfit_ratio 1.13–1.24). Outputs saved to validation/overfit_metrics.csv and validation/overfit_analysis.md.
+
+#### [✓] step-3: Residual Bias & Autocorrelation Diagnostics
+- **Agent:** codex-main  **Time:** 2026-03-29 13:34:30  **Status:** approved
+- Built analyze_residuals.py with Ljung-Box autocorrelation testing (lag=10), bias threshold checks, and split-metadata validation; produced 13 artifacts — the Python script, residual_diagnostics.csv, residual_diagnostics.md, and 10 PNGs (residual + ACF plots for 5 top-ranked models including linear_regression and ridge_alpha1).
