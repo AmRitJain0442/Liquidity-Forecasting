@@ -187,3 +187,26 @@
 #### [✗] step-1: Data Pipeline & Leakage Audit
 - **Agent:** codex-main  **Time:** 2026-03-29 13:09:35  **Status:** rejected
 - Step-1 produced no deliverables; all 223 listed files are git internal objects. leakage_audit.md and audit_leakage.py were not created.
+
+## Task: Audit the liquidity-index ablation study for overfitting, underfitting, data leakage, systematic bias, and metric errors; rectify any issues found and produce a validation report.
+*Started: 2026-03-29 13:13:05* · Task ID: `liq-val02`
+
+### Plan (8 steps)
+
+| Step | Title | Type | Agent |
+|------|-------|------|-------|
+| step-1 | Data Pipeline & Leakage Audit | review | codex-worker |
+| step-2 | Train vs Test Performance Gap Analysis | code | codex-worker |
+| step-3 | Residual Bias & Autocorrelation Diagnostics | code | codex-worker |
+| step-4 | Walk-Forward Time-Series Cross-Validation | code | codex-worker |
+| step-5 | Rectify Identified Leakage & Bias Issues | code | codex-worker |
+| step-6 | MAPE & SMAPE Edge-Case Audit | code | codex-worker |
+| step-7 | Corrected Leaderboard & Validation Summary Report | docs | codex-worker |
+| step-8 | Reproducibility Smoke-Test | test | codex-worker |
+
+### Progress
+
+
+#### [✓] step-1: Data Pipeline & Leakage Audit
+- **Agent:** codex-main  **Time:** 2026-03-29 13:19:00  **Status:** approved
+- Leakage audit produced audit_leakage.py (38k chars) and leakage_audit.md with 9 checks across 4 PASS / 3 FAIL verdicts; confirmed genuine leakage in IQR clipping scope (pre-split), RNN/advanced-DL sequence boundary overlap (666/667 test windows reuse holdout observations), and ensemble test-tuning; split metadata fully documented (3335 model-ready rows, 2668 train / 667 test, no chronological overlap).
