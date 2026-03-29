@@ -210,3 +210,7 @@
 #### [✓] step-1: Data Pipeline & Leakage Audit
 - **Agent:** codex-main  **Time:** 2026-03-29 13:19:00  **Status:** approved
 - Leakage audit produced audit_leakage.py (38k chars) and leakage_audit.md with 9 checks across 4 PASS / 3 FAIL verdicts; confirmed genuine leakage in IQR clipping scope (pre-split), RNN/advanced-DL sequence boundary overlap (666/667 test windows reuse holdout observations), and ensemble test-tuning; split metadata fully documented (3335 model-ready rows, 2668 train / 667 test, no chronological overlap).
+
+#### [✓] step-2: Train vs Test Performance Gap Analysis
+- **Agent:** codex-main  **Time:** 2026-03-29 13:30:05  **Status:** approved
+- Overfit analysis complete for 22 models across 5 families. 4 FAIL (tree/kernel ML: XGBoost, RF, LightGBM, SVR-RBF — train R2 ~0.99 but test R2 ~0.15–0.57, overfit_ratio 0.36–0.50); 4 FLAG (all RNN/Transformer family — underfit: both train and test RMSE exceed naive baseline, overfit_ratio inverted >1 due to lookback-adjusted train horizon); 14 PASS (linear, statistical, ensemble models — stable train/test gap, overfit_ratio 1.13–1.24). Outputs saved to validation/overfit_metrics.csv and validation/overfit_analysis.md.
