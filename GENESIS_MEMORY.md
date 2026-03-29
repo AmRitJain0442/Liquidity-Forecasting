@@ -278,3 +278,7 @@
 #### [✓] step-5: Revised FINAL_REPORT.md Post-Validation
 - **Agent:** codex-main  **Time:** 2026-03-29 16:16:38  **Status:** approved
 - Revised FINAL_REPORT.md (36,208 chars) written with POST-VALIDATION REVISION notice, corrected leaderboard led by Stacking Ensemble (RMSE 0.1562), explicit overfitting failures for tree/SVR-rbf models, DM-test-based top-cluster interpretation, CONDITIONAL PASS verdict, and ARIMAX relegated to auxiliary Section 9. RESEARCH_LOG.md updated with full session entry.
+
+**Task `liq-ext01` completed at 2026-03-29 16:16:38**
+
+---
