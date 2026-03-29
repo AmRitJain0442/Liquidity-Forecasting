@@ -282,3 +282,23 @@
 **Task `liq-ext01` completed at 2026-03-29 16:16:38**
 
 ---
+
+## Task: Produce a single comprehensive MASTER_FINAL_REPORT.md that narrates every task, artifact, finding, and conclusion from the entire liquidity-index research project (liq-val02 + liq-ext01), suitable as a standalone research deliverable.
+*Started: 2026-03-29 16:32:09* · Task ID: `fin-rep01`
+
+### Plan (5 steps)
+
+| Step | Title | Type | Agent |
+|------|-------|------|-------|
+| step-1 | Inventory All Artifacts Across the Project | research | codex-worker |
+| step-2 | Extract Key Metrics & Findings From All CSVs and MDs | research | codex-worker |
+| step-3 | Write MASTER_FINAL_REPORT.md — Methodology & Data Sections | docs | codex-worker |
+| step-4 | Write MASTER_FINAL_REPORT.md — Results & Conclusions Sections | docs | codex-worker |
+| step-5 | Quality-Check & Finalize MASTER_FINAL_REPORT.md | review | codex-worker |
+
+### Progress
+
+
+#### [✓] step-1: Inventory All Artifacts Across the Project
+- **Agent:** codex-main  **Time:** 2026-03-29 16:40:28  **Status:** approved
+- Generated artifact_inventory.txt cataloguing 277 project files under Liquidity-Index-Research-/ with relative paths, byte sizes, and one-sentence descriptions; also produced the reusable generate_artifact_inventory.py script that drove the scan.
