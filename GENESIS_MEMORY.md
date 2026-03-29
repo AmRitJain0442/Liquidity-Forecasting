@@ -222,3 +222,7 @@
 #### [✓] step-4: Walk-Forward Time-Series Cross-Validation
 - **Agent:** codex-main  **Time:** 2026-03-29 13:40:40  **Status:** approved
 - Walk-forward CV (5 expanding folds) completed for Ridge, LinearRegression, Lasso, and Naive/Persistence. All models pass the 15% RMSE-inflation threshold vs single-split leaderboard; mean walk-forward RMSE for Ridge is 0.1577 (+0.54%). Fold 3 and 5 show notably lower R² (~0.39) suggesting 2021-2022 and 2023-2024 periods are harder to forecast — a legitimate temporal-regime signal worth tracking.
+
+#### [✓] step-5: Rectify Identified Leakage & Bias Issues
+- **Agent:** codex-main  **Time:** 2026-03-29 14:42:21  **Status:** approved
+- Rectification audit completed: IQR clipping leakage fixed (train-only bounds), residual mean-bias correction applied to 11 tree/DL models. All 4 artifacts produced: rectify_issues.py (46K), rectification_log.md with full audit trail, rectification_metrics.csv with before/after for all 22 models, and updated metrics_registry.csv sorted by RMSE. 9 of 22 pre-fix baselines were reconstructed in-memory (no legacy CSV available) but this is explicitly documented.
