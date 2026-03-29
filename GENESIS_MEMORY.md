@@ -270,3 +270,7 @@
 #### [✓] step-3: Temporal Stability & Regime Analysis
 - **Agent:** codex-main  **Time:** 2026-03-29 15:49:10  **Status:** approved
 - Temporal stability analysis produced for all 22 models across 5 sub-periods (H2-2022 through 2024-H2): Lasso(alpha=0.01) is most stable (RMSE std 0.0315), SVR-RBF least stable (0.0989); 2024-H1 is the hardest regime (mean RMSE 0.2730, all 22 models posting worst-period RMSE there); deep learning and tree models show pronounced degradation in later periods. All four artifacts delivered: temporal_stability.py, temporal_stability.csv (22 rows, 5-period RMSEs + stability_rank), temporal_stability.md, temporal_heatmap.png.
+
+#### [✓] step-4: ARIMAX with Lagged Exogenous Features
+- **Agent:** codex-main  **Time:** 2026-03-29 16:00:21  **Status:** approved
+- ARIMAX(1,1,1) with top-5 Ridge-selected lagged exogenous features (lag_1, lag_2, rolling_mean_21, lag_5, lag_4) was implemented and evaluated; it does not improve on the ARIMA(1,1,1) baseline — RMSE 0.1585 vs 0.1580 (+0.26%) — confirming that lag-based exogenous regressors add no information beyond the ARIMA internal structure. All artifacts written: arimax_exog.py, predictions CSV, arimax_evaluation.md, and metrics_registry.csv updated.
