@@ -262,3 +262,7 @@
 #### [✓] step-1: Diebold-Mariano Significance Tests for Top-5 Models
 - **Agent:** codex-main  **Time:** 2026-03-29 15:27:51  **Status:** approved
 - Diebold-Mariano pairwise significance tests completed for the corrected top-5 leaderboard models. All 10 pairs produced p-values far above α=0.05 (range 0.37–0.92), confirming rank-1 (Stacking Ensemble) is not statistically distinguishable from rank-2 or rank-3. Harvey-Leybourne-Newbold small-sample correction applied. Artifacts: dm_significance.py, dm_tests.csv (10 rows), dm_tests.md.
+
+#### [✓] step-2: Extended Walk-Forward CV for All 22 Models
+- **Agent:** codex-main  **Time:** 2026-03-29 15:40:50  **Status:** approved
+- Walk-forward CV (5 expanding folds, 60% min-train window) completed for 16 refittable models (6 DL skipped); results in walkforward_full.csv and walkforward_full.md confirm linear/ensemble families have CV inflation < 1.6% while tree-based models show 2-4× higher fold variance (std_rmse up to 0.088), strongly supporting stability of the linear model family.
