@@ -164,3 +164,22 @@
 **Task `liq-ab03` completed at 2026-03-29 02:49:49**
 
 ---
+
+## Task: Audit the complete liquidity-index ablation study for overfitting, underfitting, data leakage, systematic bias, and metric errors; rectify any issues found and produce a validation report.
+*Started: 2026-03-29 12:55:30* · Task ID: `liq-val01`
+
+### Plan (8 steps)
+
+| Step | Title | Type | Agent |
+|------|-------|------|-------|
+| step-1 | Data Pipeline & Leakage Audit | review | codex-worker |
+| step-2 | Train vs Test Performance Gap Analysis | code | codex-worker |
+| step-3 | Residual Bias & Autocorrelation Diagnostics | code | codex-worker |
+| step-4 | Walk-Forward Time-Series Cross-Validation | code | codex-worker |
+| step-5 | Rectify Identified Leakage & Bias Issues | code | codex-worker |
+| step-6 | MAPE & SMAPE Edge-Case Audit | code | codex-worker |
+| step-7 | Corrected Leaderboard & Validation Summary Report | docs | codex-worker |
+| step-8 | Reproducibility Smoke-Test | test | codex-worker |
+
+### Progress
+
