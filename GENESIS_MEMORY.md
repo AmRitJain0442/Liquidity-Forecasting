@@ -230,3 +230,7 @@
 #### [✓] step-6: MAPE & SMAPE Edge-Case Audit
 - **Agent:** codex-main  **Time:** 2026-03-29 14:50:13  **Status:** approved
 - Metric audit (validation/metric_audit.md) ran 4 checks across 22 models: PASS on finite metrics, SMAPE formula symmetry, and RMSE spot-check; FAIL on near-zero target exposure — 2024-11-01 target (0.02967) inflates MAPE by up to 5.85 pp for the worst models (worst APE 3921%). Registry values are mathematically correct; no corrections applied. SMAPE/MAE/RMSE recommended for ranking.
+
+#### [✓] step-7: Corrected Leaderboard & Validation Summary Report
+- **Agent:** codex-main  **Time:** 2026-03-29 14:58:02  **Status:** approved
+- Generated VALIDATION_REPORT.md (11,831 chars, well over 600 words) with an 8-section structure including Executive Summary (CONDITIONAL PASS verdict), Data Leakage Findings, and Overfitting/Underfitting Findings; regenerated leaderboard.csv placing Stacking Ensemble (Linear Meta-Learner) at rank 1 with RMSE 0.1562, reflecting post-rectification metrics. A 28KB generator script (generate_validation_report.py) drives all report sections from validated artifact CSVs and markdown files.
