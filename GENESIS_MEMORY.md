@@ -322,3 +322,22 @@
 **Task `fin-rep01` completed at 2026-03-29 17:21:21**
 
 ---
+
+## Task: Verify that MASTER_FINAL_REPORT.md and all supporting artifacts are complete, correct, and the deferred quality-check script actually executes cleanly.
+*Started: 2026-03-29 21:41:53* · Task ID: `ver-001`
+
+### Plan (4 steps)
+
+| Step | Title | Type | Agent |
+|------|-------|------|-------|
+| step-1 | Confirm artifact presence and sizes | review | codex-worker |
+| step-2 | Execute finalize_master_report.py quality-check | test | codex-worker |
+| step-3 | Spot-check key metrics in MASTER_FINAL_REPORT.md | review | codex-worker |
+| step-4 | Write verification summary and update RESEARCH_LOG.md | docs | codex-worker |
+
+### Progress
+
+
+#### [⚠] step-1: Confirm artifact presence and sizes
+- **Agent:** codex-main  **Time:** 2026-03-29 21:48:03  **Status:** needs_revision
+- Worker wrote verify_artifact_presence.py (5069 bytes) defining checks for 8 artifacts across Liquidity-Index-Research-/ subdirectories, but did not execute it — no actual verification results were produced.
