@@ -218,3 +218,7 @@
 #### [✓] step-3: Residual Bias & Autocorrelation Diagnostics
 - **Agent:** codex-main  **Time:** 2026-03-29 13:34:30  **Status:** approved
 - Built analyze_residuals.py with Ljung-Box autocorrelation testing (lag=10), bias threshold checks, and split-metadata validation; produced 13 artifacts — the Python script, residual_diagnostics.csv, residual_diagnostics.md, and 10 PNGs (residual + ACF plots for 5 top-ranked models including linear_regression and ridge_alpha1).
+
+#### [✓] step-4: Walk-Forward Time-Series Cross-Validation
+- **Agent:** codex-main  **Time:** 2026-03-29 13:40:40  **Status:** approved
+- Walk-forward CV (5 expanding folds) completed for Ridge, LinearRegression, Lasso, and Naive/Persistence. All models pass the 15% RMSE-inflation threshold vs single-split leaderboard; mean walk-forward RMSE for Ridge is 0.1577 (+0.54%). Fold 3 and 5 show notably lower R² (~0.39) suggesting 2021-2022 and 2023-2024 periods are harder to forecast — a legitimate temporal-regime signal worth tracking.
