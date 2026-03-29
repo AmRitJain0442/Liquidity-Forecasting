@@ -183,3 +183,7 @@
 
 ### Progress
 
+
+#### [✗] step-1: Data Pipeline & Leakage Audit
+- **Agent:** codex-main  **Time:** 2026-03-29 13:09:35  **Status:** rejected
+- Step-1 produced no deliverables; all 223 listed files are git internal objects. leakage_audit.md and audit_leakage.py were not created.
