@@ -266,3 +266,7 @@
 #### [✓] step-2: Extended Walk-Forward CV for All 22 Models
 - **Agent:** codex-main  **Time:** 2026-03-29 15:40:50  **Status:** approved
 - Walk-forward CV (5 expanding folds, 60% min-train window) completed for 16 refittable models (6 DL skipped); results in walkforward_full.csv and walkforward_full.md confirm linear/ensemble families have CV inflation < 1.6% while tree-based models show 2-4× higher fold variance (std_rmse up to 0.088), strongly supporting stability of the linear model family.
+
+#### [✓] step-3: Temporal Stability & Regime Analysis
+- **Agent:** codex-main  **Time:** 2026-03-29 15:49:10  **Status:** approved
+- Temporal stability analysis produced for all 22 models across 5 sub-periods (H2-2022 through 2024-H2): Lasso(alpha=0.01) is most stable (RMSE std 0.0315), SVR-RBF least stable (0.0989); 2024-H1 is the hardest regime (mean RMSE 0.2730, all 22 models posting worst-period RMSE there); deep learning and tree models show pronounced degradation in later periods. All four artifacts delivered: temporal_stability.py, temporal_stability.csv (22 rows, 5-period RMSEs + stability_rank), temporal_stability.md, temporal_heatmap.png.
